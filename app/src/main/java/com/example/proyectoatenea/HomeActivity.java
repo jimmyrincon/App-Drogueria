@@ -1,7 +1,10 @@
 package com.example.proyectoatenea;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,30 +21,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
-    private RecyclerView recyclerView;
-    private ProductAdapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
-    private List<Product> productList;
+
+    private Button btnProductBuscar;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
+        btnProductBuscar.findViewById(R.id.btnProductBuscar);
 
-
-        recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
-        // Cargar datos de ejemplo
-        productList = new ArrayList<>();
-        productList.add(new Product("Acetaminofen", "$10", R.drawable.login));
-        productList.add(new Product("Ibuprofeno", "$12", R.drawable.login));
-        // Agrega más productos según sea necesario
-
-        adapter = new ProductAdapter(productList, this);
-        recyclerView.setAdapter(adapter);
+        btnProductBuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(HomeActivity.this,)
+            }
+        });
     }
 }

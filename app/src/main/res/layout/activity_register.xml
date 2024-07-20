@@ -11,7 +11,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@drawable/rounded_background">
+        android:background="@drawable/rounded_background"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/logo2"
+            android:layout_gravity="center_horizontal"/>
     </LinearLayout>
 
     <ImageView
@@ -27,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/merriweather_sans"
-        android:text="Registarse"
+        android:text="Registrarse"
         android:textColor="@color/black"
         android:textSize="25dp"
         android:layout_gravity="center_horizontal"/>
